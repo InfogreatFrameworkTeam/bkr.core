@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <bkr.api.name>bkr.api</bkr.api.name>
   </properties>
 
   <dependencies>
@@ -22,4 +23,28 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <jarName>bkr-core</jarName>
+                        <!-- 打包到api工程的lib目录 -->
+                        <outputDirectory>${basedir}\..\${bkr.api.name}\src\main\webapp\WEB-INF\lib</outputDirectory>  
+                        <archive>
+                            <!-- 不打包依赖的jar-->
+                            <manifest>
+                                <addClasspath>false</addClasspath>
+                                <classpathPrefix>lib/</classpathPrefix>
+                            </manifest>
+                        </archive>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
