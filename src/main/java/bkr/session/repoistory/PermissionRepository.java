@@ -1,10 +1,10 @@
-package bkr.core.data.repository;
+package bkr.session.repoistory;
 
 import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-import bkr.core.data.model.Permission;
+import bkr.session.model.Permission;
 
 /**
  * 权限表库

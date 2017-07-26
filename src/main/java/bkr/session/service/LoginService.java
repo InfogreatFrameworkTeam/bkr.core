@@ -1,4 +1,4 @@
-package bkr.core.service.session;
+package bkr.session.service;
 
 import bkr.session.dto.UserDto;
 

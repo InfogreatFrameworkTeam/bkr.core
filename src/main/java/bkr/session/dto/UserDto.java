@@ -1,10 +1,10 @@
-package bkr.core.data.dto;
+package bkr.session.dto;
 
 import java.util.List;
 
-import bkr.core.data.model.Permission;
-import bkr.core.data.model.Role;
-import bkr.core.data.model.User;
+import bkr.session.model.Permission;
+import bkr.session.model.Role;
+import bkr.session.model.User;
 
 /**
  * 用户DTO
