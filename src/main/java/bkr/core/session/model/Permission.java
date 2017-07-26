@@ -11,8 +11,6 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
-
 /**
  * 权限表 model
  * 
@@ -20,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  */
 @Entity
 @Table(name = "permission")
-@JsonIgnoreProperties(value={"user"}) 
+@JsonIgnoreProperties(value = { "user" })
 public class Permission {
     /** 权限Id */
     @Id
