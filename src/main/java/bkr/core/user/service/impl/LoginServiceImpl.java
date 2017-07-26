@@ -1,13 +1,13 @@
-package bkr.core.session.service.impl;
+package bkr.core.user.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import bkr.base.util.security.MD5Util;
-import bkr.core.session.entity.QUser;
-import bkr.core.session.entity.User;
-import bkr.core.session.repoistory.UserRepository;
-import bkr.core.session.service.LoginService;
+import bkr.core.user.entity.QUser;
+import bkr.core.user.entity.User;
+import bkr.core.user.repoistory.UserRepository;
+import bkr.core.user.service.LoginService;
 
 /**
  * 登录服务接口实现类

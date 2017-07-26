@@ -1,6 +1,6 @@
-package bkr.core.session.service;
+package bkr.core.user.service;
 
-import bkr.core.session.entity.User;
+import bkr.core.user.entity.User;
 
 /**
  * 登录服务接口

@@ -1,4 +1,4 @@
-package bkr.core.session.entity;
+package bkr.core.user.entity;
 
 import java.util.List;
 
