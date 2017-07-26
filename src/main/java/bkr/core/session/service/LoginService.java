@@ -1,6 +1,6 @@
-package bkr.session.service;
+package bkr.core.session.service;
 
-import bkr.session.dto.UserDto;
+import bkr.core.session.dto.UserDto;
 
 /**
  * 登录服务接口

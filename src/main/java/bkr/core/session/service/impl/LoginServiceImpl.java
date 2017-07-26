@@ -1,13 +1,13 @@
-package bkr.core.service.session.impl;
+package bkr.core.session.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import bkr.core.service.session.LoginService;
-import bkr.session.dto.UserDto;
-import bkr.session.model.QUser;
-import bkr.session.model.User;
-import bkr.session.repoistory.UserRepository;
+import bkr.core.session.dto.UserDto;
+import bkr.core.session.model.QUser;
+import bkr.core.session.model.User;
+import bkr.core.session.repoistory.UserRepository;
+import bkr.core.session.service.LoginService;
 
 /**
  * 登录服务接口实现类

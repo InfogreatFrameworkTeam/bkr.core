@@ -1,4 +1,4 @@
-package bkr.session.model;
+package bkr.core.session.model;
 
 import java.util.List;
 
