@@ -1,4 +1,4 @@
-package bkr.core.session.model;
+package bkr.core.session.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

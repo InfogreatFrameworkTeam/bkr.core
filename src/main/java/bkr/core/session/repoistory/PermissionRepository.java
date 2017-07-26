@@ -4,7 +4,7 @@ import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-import bkr.core.session.model.Permission;
+import bkr.core.session.entity.Permission;
 
 /**
  * 权限表库

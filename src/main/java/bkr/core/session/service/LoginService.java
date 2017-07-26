@@ -1,6 +1,6 @@
 package bkr.core.session.service;
 
-import bkr.core.session.dto.UserDto;
+import bkr.core.session.entity.User;
 
 /**
  * 登录服务接口
@@ -16,5 +16,5 @@ public interface LoginService {
      * @param userPassword
      *            用户密码
      */
-    UserDto login(String userName, String userPassword);
+    User login(String userName, String userPassword);
 }
