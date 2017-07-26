@@ -2,15 +2,15 @@ package bkr.core.user.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * 角色表 model
@@ -19,7 +19,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  */
 @Entity
 @Table(name = "role")
-@JsonIgnoreProperties(value = { "userList" })
 public class Role {
     /** 角色Id */
     @Id
@@ -34,7 +33,7 @@ public class Role {
     private String memo;
 
     /** 角色用户 */
-    @OneToMany(mappedBy = "role")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "role")
     private List<User> userList;
 
     /**
