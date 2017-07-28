@@ -80,13 +80,6 @@
 			<version>4.1.4</version>
 		</dependency>
 
-		<!-- <dependency>
-			<groupId>bkr.base</groupId>
-			<artifactId>bkr-base</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${basedir}\..\${bkr.api.name}\src\main\webapp\WEB-INF\lib\bkr-base.jar</systemPath>
-		</dependency> -->
 		<dependency>
 			<groupId>bkr</groupId>
 			<artifactId>base</artifactId>
