@@ -14,6 +14,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 /**
  * 用户表 model
  * 
@@ -21,6 +23,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "user")
+@Data
 public class User {
     /** 用户Id */
     @Id
@@ -48,110 +51,4 @@ public class User {
     /** 用户权限 */
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private List<Permission> permissionList;
-
-    /**
-     * @return the userId
-     */
-    public Long getUserId() {
-        return userId;
-    }
-
-    /**
-     * @param userId
-     *            the userId to set
-     */
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param name
-     *            the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return the password
-     */
-    public String getPassword() {
-        return password;
-    }
-
-    /**
-     * @param password
-     *            the password to set
-     */
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    /**
-     * @return the mail
-     */
-    public String getMail() {
-        return mail;
-    }
-
-    /**
-     * @param mail
-     *            the mail to set
-     */
-    public void setMail(String mail) {
-        this.mail = mail;
-    }
-
-    /**
-     * @return the photo
-     */
-    public String getPhoto() {
-        return photo;
-    }
-
-    /**
-     * @param photo
-     *            the photo to set
-     */
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
-
-    /**
-     * @return the role
-     */
-    public Role getRole() {
-        return role;
-    }
-
-    /**
-     * @param role
-     *            the role to set
-     */
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
-    /**
-     * @return the permissionList
-     */
-    public List<Permission> getPermissionList() {
-        return permissionList;
-    }
-
-    /**
-     * @param permissionList
-     *            the permissionList to set
-     */
-    public void setPermissionList(List<Permission> permissionList) {
-        this.permissionList = permissionList;
-    }
-
 }

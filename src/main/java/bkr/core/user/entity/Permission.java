@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 /**
  * 权限表 model
  * 
@@ -17,6 +19,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "permission")
+@Data
 public class Permission {
     /** 权限Id */
     @Id
@@ -31,50 +34,4 @@ public class Permission {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userId")
     private User user;
-
-    /**
-     * @return the permissionId
-     */
-    public Long getPermissionId() {
-        return permissionId;
-    }
-
-    /**
-     * @param permissionId
-     *            the permissionId to set
-     */
-    public void setPermissionId(Long permissionId) {
-        this.permissionId = permissionId;
-    }
-
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param name
-     *            the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return the user
-     */
-    public User getUser() {
-        return user;
-    }
-
-    /**
-     * @param user
-     *            the user to set
-     */
-    public void setUser(User user) {
-        this.user = user;
-    }
-
 }
