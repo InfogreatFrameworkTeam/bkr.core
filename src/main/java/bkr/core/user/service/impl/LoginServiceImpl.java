@@ -37,8 +37,7 @@ public class LoginServiceImpl implements LoginService {
         String md5Pass = MD5Util.getMD5(userPassword);
 
         // 检索用户
-        User user = userRepository.findOne(quser.name.eq(userName).and(
-                quser.password.eq(md5Pass)));
+        User user = userRepository.findOne(quser.name.eq(userName).and(quser.password.eq(md5Pass)));
 
         // 返回检索结果
         return user;

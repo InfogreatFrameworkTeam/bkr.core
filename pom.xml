@@ -24,48 +24,29 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
+	    <!-- Spring Boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<!-- <version>3.0.1</version> -->
-		</dependency>
-
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<scope>provided</scope>
-		</dependency>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency> -->
+		
+		<!-- Database -->
+<!-- 		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency> -->
+	
+		<!-- Database ORM -->
 		<dependency>
 			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-apt</artifactId>
@@ -79,34 +60,41 @@
 			<artifactId>querydsl-sql</artifactId>
 			<version>4.1.4</version>
 		</dependency>
-
+		
+		<!-- App Library -->
 		<dependency>
-			<groupId>bkr.base</groupId>
+			<groupId>bkr</groupId>
 			<artifactId>bkr-base</artifactId>
 			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${basedir}\..\${bkr.api.name}\src\main\webapp\WEB-INF\lib\bkr-base.jar</systemPath>
+			<scope>compile</scope>	
+		</dependency>
+		
+		<!-- TEST -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-			<plugin>
+<!-- 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<configuration>
 					<jarName>bkr-core</jarName>
-					<!-- 打包到api工程的lib目录 -->
+					打包到api工程的lib目录
 					<outputDirectory>${basedir}\..\${bkr.api.name}\src\main\webapp\WEB-INF\lib</outputDirectory>
 					<archive>
-						<!-- 不打包依赖的jar -->
+						不打包依赖的jar
 						<manifest>
 							<addClasspath>false</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
 						</manifest>
 					</archive>
 				</configuration>
-			</plugin>
+			</plugin> -->
 
 			<plugin>
 				<groupId>com.mysema.maven</groupId>
